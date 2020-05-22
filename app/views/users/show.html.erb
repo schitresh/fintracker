@@ -1,0 +1,14 @@
+<h3>User</h3>
+
+<dl class="dl-horizontal">
+  <dt><strong>Name</strong></dt>
+  <dd><%= @user.full_name %></dd>
+  <dt><strong>Email</strong></dt>
+  <dd><%= @user.email %></dd>
+</dl>
+
+<% if @user.stocks.size > 0 %>
+  <%= render 'stocks/list' %>
+<% else %>
+  This User not tracking any Stocks
+<% end %>

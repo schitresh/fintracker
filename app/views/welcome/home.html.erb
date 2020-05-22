@@ -1,0 +1,19 @@
+<div class="container" align="center">
+  <h1> Welcome to FinTracker </h1>
+  <% if !current_user.present? %>
+    <%= link_to  "Sign Up to make your personal portfolio", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to  "Login if already signed up", new_user_session_path, class: "btn btn-success btn-lg" %>
+  <% end %>
+</div>
+<br><br>
+<div class="container col-md-offset-2" align="center">
+  <%= render 'users/stocklookup' %>
+</div>
+<div class='container col-md-offset-3'>
+  <h4>Some popular Symbols</h4>
+  <ul>
+    <li>GOOG - Google
+    <li>AAPL - Apple
+  </ul>
+</div>
+<br>
